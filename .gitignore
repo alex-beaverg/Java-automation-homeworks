@@ -1,4 +1,4 @@
-/.idea
-/out
+/.gitignore
+.idea/
+out/
 Java-automation-project.iml
-.gitignore
