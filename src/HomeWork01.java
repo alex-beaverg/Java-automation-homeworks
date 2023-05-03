@@ -11,7 +11,8 @@ public class HomeWork01 {
     public void printInformationAboutMe() {
         System.out.println("\nTask 1. Information about myself");
         System.out.println("------");
-        System.out.println("LOG_INFO: Print information about me");
+        System.out.println("LOG_INFO: Function for print information about me starts");
+
         String name = "Alexey";
         String surname = "Bobrikov";
         String patronymic = "Valerievich";
@@ -26,7 +27,8 @@ public class HomeWork01 {
     public void printAllTypesVariables() {
         System.out.println("\nTask 2. All types of variables");
         System.out.println("------");
-        System.out.println("LOG_INFO: Print all types variables");
+        System.out.println("LOG_INFO: Function for print all types variables starts");
+
         byte a = 100;
         short b = 1000;
         int c = 10000;
@@ -53,7 +55,8 @@ public class HomeWork01 {
     public void printStringMethods() {
         System.out.println("\nTask 3. String methods");
         System.out.println("------");
-        System.out.println("LOG_INFO: Print String methods");
+        System.out.println("LOG_INFO: Function for print String methods starts");
+
         System.out.print("Enter your text, for example 'Hello world!!!': ");
         Scanner scanner = new Scanner(System.in);
         String text = scanner.nextLine();
