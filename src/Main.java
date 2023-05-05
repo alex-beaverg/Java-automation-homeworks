@@ -1,7 +1,9 @@
-import HomeWork03.Bed;
-import HomeWork03.Room;
-import HomeWork03.Table;
-import HomeWork03.Wardrobe;
+import HomeWork03and04.Bed;
+import HomeWork03and04.Room;
+import HomeWork03and04.Table;
+import HomeWork03and04.Wardrobe;
+
+import java.util.Scanner;
 
 /**
  * Class Main
@@ -16,16 +18,16 @@ public class Main {
 
     public static void main(String[] args) {
         // Launch "Homework 01":
-//        homeWork01Launcher();
+        homeWork01Launcher();
 
         // Launch "Homework 02":
-//        homeWork02Launcher();
+        homeWork02Launcher();
 
         // Launch "Homework 02. Additional tasks":
-//        homeWork02AdditionalTasksLauncher();
+        homeWork02AdditionalTasksLauncher();
 
         // Launch "HomeWork 03":
-//        homeWork03Launcher();
+        homeWork03and04Launcher();
     }
 
     /**
@@ -98,14 +100,14 @@ public class Main {
     }
 
     /**
-     * Function for launch Homework 03
+     * Function for launch Homework 03 and 04
      */
-    public static void homeWork03Launcher() {
-        System.out.println("\nHomework 03");
+    public static void homeWork03and04Launcher() {
+        System.out.println("\nHomework 03 and 04");
         System.out.println("-----------");
-        System.out.println(ANSI_YELLOW + "LOG_INFO: Homework 03 starts" + ANSI_RESET);
+        System.out.println(ANSI_YELLOW + "LOG_INFO: Homework 03 and 04 starts" + ANSI_RESET);
 
-        // Actions for "HomeWork 03":
+        // Actions for "HomeWork 03 and 04":
         Room myRoom = new Room("'Bedroom'", 8, 5, 3);
         Table myTable = new Table("'Work desk'", 1.5, 1, 0.8);
         myRoom.addSubjectToRoom(myTable);
@@ -119,5 +121,11 @@ public class Main {
         myBed.printSubjectInformation();
         myWardrobe.printSubjectInformation();
         myRoom.printRoomInformation();
+
+        // Additional actions
+        System.out.print("The wardrobe depth is too small. Enter the new one: ");
+        double newWardrobeDepth = Double.parseDouble(new Scanner(System.in).nextLine());
+        myWardrobe.setWardrobeDepth(newWardrobeDepth);
+        myWardrobe.printSubjectInformation();
     }
 }

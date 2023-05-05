@@ -1,13 +1,13 @@
-package HomeWork03;
+package HomeWork03and04;
 
 /**
  * Class Bed implements interface Subject
  */
 public class Bed implements Subject {
-    private String bedName;
-    private int bedLength;
-    private int bedWidth;
-    private int bedHeight;
+    private final String bedName;
+    private final int bedLength;
+    private final int bedWidth;
+    private final int bedHeight;
 
     /**
      * Constructor for class Bed

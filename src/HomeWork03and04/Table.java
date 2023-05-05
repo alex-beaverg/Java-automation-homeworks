@@ -1,13 +1,13 @@
-package HomeWork03;
+package HomeWork03and04;
 
 /**
  * Class Table implements interface Subject
  */
 public class Table implements Subject {
-    private String tableName;
-    private double tableLength;
-    private double tableWidth;
-    private double tableHeight;
+    private final String tableName;
+    private final double tableLength;
+    private final double tableWidth;
+    private final double tableHeight;
 
     /**
      * Constructor for class Table

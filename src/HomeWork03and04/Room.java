@@ -1,4 +1,4 @@
-package HomeWork03;
+package HomeWork03and04;
 
 import java.util.ArrayList;
 
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 public class Room {
     private static final String ANSI_YELLOW = "\u001B[33m";
     private static final String ANSI_RESET = "\u001B[0m";
-    private String roomName;
-    private int roomLength;
-    private int roomWidth;
-    private int roomHeight;
-    private ArrayList<Subject> subjects;
+    private final String roomName;
+    private final int roomLength;
+    private final int roomWidth;
+    private final int roomHeight;
+    private final ArrayList<Subject> subjects;
 
     /**
      * Constructor for class Room

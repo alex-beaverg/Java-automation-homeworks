@@ -1,4 +1,4 @@
-package HomeWork03;
+package HomeWork03and04;
 
 /**
  * Interface Subject

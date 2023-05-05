@@ -1,24 +1,34 @@
-package HomeWork03;
+package HomeWork03and04;
 
 /**
  * Class Wardrobe implements interface Subject
  */
 public class Wardrobe implements Subject {
-    private String wardrobeName;
-    private double wardrobeLength;
-    private double wardrobeWidth;
-    private double wardrobeHeight;
+    private final String wardrobeName;
+    private double wardrobeDepth;
+    private final double wardrobeWidth;
+    private final double wardrobeHeight;
 
     /**
      * Constructor for class Wardrobe
      */
-    public Wardrobe(String wardrobeName, double wardrobeLength, double wardrobeWidth, double wardrobeHeight) {
+    public Wardrobe(String wardrobeName, double wardrobeDepth, double wardrobeWidth, double wardrobeHeight) {
         System.out.printf(ANSI_YELLOW + "LOG_INFO: Wardrobe 'constructor' -> " +
                 "Create object Wardrobe with name %s%n" + ANSI_RESET, wardrobeName);
         this.wardrobeName = wardrobeName;
-        this.wardrobeLength = wardrobeLength;
+        this.wardrobeDepth = wardrobeDepth;
         this.wardrobeWidth = wardrobeWidth;
         this.wardrobeHeight = wardrobeHeight;
+    }
+
+    /**
+     * Setter for variable wardrobeDepth
+     */
+    public void setWardrobeDepth(double wardrobeDepth) {
+        System.out.printf(ANSI_YELLOW + "LOG_INFO: Wardrobe depth 'setter' -> " +
+                "Set new Wardrobe depth. Old value = %s. New value = %s%n" +
+                ANSI_RESET, this.wardrobeDepth, wardrobeDepth);
+        this.wardrobeDepth = wardrobeDepth;
     }
 
     /**
@@ -40,7 +50,7 @@ public class Wardrobe implements Subject {
                 "Print information about %s%n" + ANSI_RESET, this.wardrobeName);
         System.out.println("Wardrobe in room:");
         System.out.printf("\tName: %s%n", this.wardrobeName);
-        System.out.printf("\tLength: %s m %n", this.wardrobeLength);
+        System.out.printf("\tDepth: %s m %n", this.wardrobeDepth);
         System.out.printf("\tWidth: %s m %n", this.wardrobeWidth);
         System.out.printf("\tHeight: %s m %n", this.wardrobeHeight);
     }
