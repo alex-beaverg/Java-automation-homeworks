@@ -16,16 +16,16 @@ public class Main {
 
     public static void main(String[] args) {
         // Launch "Homework 01":
-        homeWork01Launcher();
+//        homeWork01Launcher();
 
         // Launch "Homework 02":
-        homeWork02Launcher();
+//        homeWork02Launcher();
 
         // Launch "Homework 02. Additional tasks":
-        homeWork02AdditionalTasksLauncher();
+//        homeWork02AdditionalTasksLauncher();
 
         // Launch "HomeWork 03":
-        homeWork03Launcher();
+//        homeWork03Launcher();
     }
 
     /**
