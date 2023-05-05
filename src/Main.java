@@ -1,7 +1,5 @@
-import HomeWork03and04.Bed;
-import HomeWork03and04.Room;
-import HomeWork03and04.Table;
-import HomeWork03and04.Wardrobe;
+import HomeWork03and04.*;
+import HomeWork05.*;
 
 import java.util.Scanner;
 
@@ -26,8 +24,11 @@ public class Main {
         // Launch "Homework 02. Additional tasks":
         homeWork02AdditionalTasksLauncher();
 
-        // Launch "HomeWork 03":
+        // Launch "HomeWork 03 and 04":
         homeWork03and04Launcher();
+
+        // Launch "HomeWork 05":
+        homeWork05Launcher();
     }
 
     /**
@@ -127,5 +128,38 @@ public class Main {
         double newWardrobeDepth = Double.parseDouble(new Scanner(System.in).nextLine());
         myWardrobe.setWardrobeDepth(newWardrobeDepth);
         myWardrobe.printSubjectInformation();
+    }
+
+    /**
+     * Function for launch Homework 05
+     */
+    public static void homeWork05Launcher() {
+        System.out.println("\nHomework 05");
+        System.out.println("-----------");
+        System.out.println(ANSI_YELLOW + "LOG_INFO: Homework 05 starts" + ANSI_RESET);
+
+        // Actions for "HomeWork 05":
+        Zoo zoo = new Zoo();
+        Lion lion = new Lion("Lion Alex");
+        zoo.addAnimalToZoo(lion);
+        Deer deer = new Deer("Deer Valera");
+        zoo.addAnimalToZoo(deer);
+        Eagle eagle = new Eagle("Eagle Steeve");
+        zoo.addAnimalToZoo(eagle);
+        Sparrow sparrow = new Sparrow("Sparrow Jack");
+        zoo.addAnimalToZoo(sparrow);
+        Pike pike = new Pike("Pike Arrow");
+        zoo.addAnimalToZoo(pike);
+        Carp carp = new Carp("Carp Anton");
+        zoo.addAnimalToZoo(carp);
+
+        // Print information
+        lion.toGrowl();
+        deer.toShit();
+        eagle.toSleep();
+        sparrow.toFly();
+        pike.toSwim();
+        carp.toEat();
+        zoo.printAllTheZoo();
     }
 }
