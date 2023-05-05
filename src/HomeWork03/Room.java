@@ -46,5 +46,9 @@ public class Room {
         System.out.printf("\tLength: %s m %n", this.roomLength);
         System.out.printf("\tWidth: %s m %n", this.roomWidth);
         System.out.printf("\tHeight: %s m %n", this.roomHeight);
+        System.out.println("\tSubjects in my room:");
+        for (Subject item : this.subjects) {
+            System.out.printf("\t\tSubject %s%n", item.getSubjectName());
+        }
     }
 }
