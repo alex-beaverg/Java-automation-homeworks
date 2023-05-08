@@ -2,6 +2,13 @@ package HomeWork06;
 
 import HomeWork06.zoo_classes.*;
 
+/*
+mvn clean compile
+mvn package
+java -jar "D:\Code\JAVA\Java-automation-project\src\HomeWork06\target\HomeWork06-1.0-SNAPSHOT.jar"
+mvn clean
+*/
+
 /**
  * Class Main
  */
