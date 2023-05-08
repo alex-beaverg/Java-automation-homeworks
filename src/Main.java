@@ -7,25 +7,25 @@ import java.util.Scanner;
  * Class Main
  */
 public class Main {
-    /**
-     * Main program entry point
-     */
     // Variables for print logs in another color:
     private static final String ANSI_YELLOW = "\u001B[33m";
     private static final String ANSI_RESET = "\u001B[0m";
 
+    /**
+     * Main program entry point
+     */
     public static void main(String[] args) {
         // Launch "Homework 01":
-//        homeWork01Launcher();
+        homeWork01Launcher();
 
         // Launch "Homework 02":
-//        homeWork02Launcher();
+        homeWork02Launcher();
 
         // Launch "Homework 02. Additional tasks":
-//        homeWork02AdditionalTasksLauncher();
+        homeWork02AdditionalTasksLauncher();
 
         // Launch "HomeWork 03 and 04":
-//        homeWork03and04Launcher();
+        homeWork03and04Launcher();
 
         // Launch "HomeWork 05":
         homeWork05Launcher();
