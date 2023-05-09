@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Positive Zoo tests">
+    <test name="Positive Zoo unit tests" parallel="true" thread-count="1">
+        <classes>
+            <class name="ZooTest">
+                <methods>
+                    <include name="addAnimalToZooMethodTestWithExpectedResult" />
+                </methods>
+            </class>
+            <class name="AnimalsTest">
+                <methods>
+                    <include name="getLionNameTestWithExpectedInput" />
+                    <include name="lionToMoveMethodTestExpectedResult" />
+                    <include name="getPikeNameTestWithExpectedInput" />
+                    <include name="pikeToMoveMethodTestExpectedResult" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
