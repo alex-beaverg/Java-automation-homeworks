@@ -1,13 +1,13 @@
-package HomeWork06;
-
-import HomeWork06.zoo_classes.*;
-
 /*
 mvn clean compile
 mvn package
 java -jar "D:\Code\JAVA\Java-automation-project\src\HomeWork06\target\HomeWork06-1.0-SNAPSHOT.jar"
 mvn clean
 */
+
+package HomeWork06and08;
+
+import HomeWork06and08.zoo_classes.*;
 
 /**
  * Class Main
@@ -55,6 +55,7 @@ public class Main {
         sparrow.toFly();
         pike.toSwim();
         carp.toEat();
+        System.out.printf("Zoo list: %s%n", zoo.getZoo());
         zoo.printAllTheZoo();
     }
 }
