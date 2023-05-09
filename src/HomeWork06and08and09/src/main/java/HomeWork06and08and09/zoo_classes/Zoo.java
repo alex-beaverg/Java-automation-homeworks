@@ -1,4 +1,4 @@
-package HomeWork06.zoo_classes;
+package HomeWork06and08and09.zoo_classes;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,19 +11,39 @@ public class Zoo {
     private static final String ANSI_YELLOW = "\u001B[33m";
     private static final String ANSI_RESET = "\u001B[0m";
 
+    // Zoo class variable:
     private static ArrayList<Animal> zoo;
 
+    /**
+     * Constructor for class Zoo
+     */
     public Zoo() {
         System.out.println(ANSI_YELLOW + "LOG_INFO: Zoo 'constructor' -> Create object Zoo" + ANSI_RESET);
         zoo = new ArrayList<>();
     }
 
+    /**
+     * Method to add animal to zoo
+     * @param animal
+     */
     public void addAnimalToZoo(Animal animal) {
         System.out.printf(ANSI_YELLOW + "LOG_INFO: Zoo 'method to add animal' -> " +
                 "Add animal %s to zoo %n" + ANSI_RESET, animal.getAnimalName());
         zoo.add(animal);
     }
 
+    /**
+     * Getter for zoo list
+     * @return zoo
+     */
+    public ArrayList<Animal> getZoo() {
+        System.out.println(ANSI_YELLOW + "LOG_INFO: Zoo 'getter' for zoo list starts" + ANSI_RESET);
+        return zoo;
+    }
+
+    /**
+     * Method to print all information about zoo
+     */
     public void printAllTheZoo() {
         System.out.println(ANSI_YELLOW + "LOG_INFO: Zoo 'method to print all the zoo' -> " +
                 "Print list of all animals in zoo" + ANSI_RESET);
@@ -48,6 +68,10 @@ public class Zoo {
         }
     }
 
+    /**
+     * Method to print exclusive information about chosen animal in zoo
+     * @param number
+     */
     private void printExclusiveInformation(int number) {
         Animal animal = zoo.get(number - 1);
         System.out.printf(ANSI_YELLOW + "LOG_INFO: Zoo 'method to print exclusive information' -> " +
