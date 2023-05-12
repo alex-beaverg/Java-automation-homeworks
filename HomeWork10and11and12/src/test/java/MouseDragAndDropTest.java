@@ -29,5 +29,6 @@ public class MouseDragAndDropTest {
                 .dragAndDrop(ball, goal).perform();
 
         Assert.assertEquals(goal.getCssValue("background-color"),"rgba(255, 192, 203, 1)");
+        driver.quit();
     }
 }
