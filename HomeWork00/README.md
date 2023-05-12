@@ -1,5 +1,5 @@
-## Information about Homework 00
-### Soft installation
-1. Install IDE / Done
-2. Install JDK / Done
-3. Path / Done
+## Homework 00
+### Introduction
+1. Install IDE
+2. Install JDK
+3. Write Path
