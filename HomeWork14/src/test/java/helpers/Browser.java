@@ -1,4 +1,4 @@
-package pageobject;
+package helpers;
 
 /**
  * Enum class Browser
@@ -13,11 +13,11 @@ public enum Browser {
         this.browserName = browserName;
     }
 
-    String getBrowserName() {
+    public String getBrowserName() {
         return browserName;
     }
 
-    static Browser getEnumByLabel(String label) {
+    public static Browser getEnumByLabel(String label) {
         for (Browser browser : values()) {
             if (browser.getBrowserName().equals(label)) {
                 return browser;
