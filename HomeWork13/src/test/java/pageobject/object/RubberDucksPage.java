@@ -1,18 +1,18 @@
 package pageobject.object;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageobject.object.pageelement.MainMenu;
+
+import static pageobject.helpers.Locators.getLocator;
 
 /**
  * Class for object RubberDucksPage (Object model)
  */
 public class RubberDucksPage extends PageBase {
-    // Fields:
-    public MainMenu mainMenu;
-    private static final By mainMenuLocator = By.id("site-menu");
     // Driver:
     private final WebDriver driver;
+    // Fields:
+    public MainMenu mainMenu;
 
     /**
      * Constructor for class RubberDucksPage
@@ -20,7 +20,7 @@ public class RubberDucksPage extends PageBase {
      */
     public RubberDucksPage(WebDriver driver) {
         this.driver = driver;
-        mainMenu = new MainMenu(driver, driver.findElement(mainMenuLocator));
+        mainMenu = new MainMenu(driver, driver.findElement(getLocator("RubberDucksPage.mainMenuLocator")));
     }
 
     /**

@@ -1,18 +1,19 @@
 package pageobject.object.pageelement;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import static pageobject.helpers.Locators.getLocator;
 
 /**
  * Class MainMenu (page element)
  */
 public class MainMenu {
-    // Fields:
-    private final WebElement mainMenuItems;
     // Driver:
     private final WebDriver driver;
+    // WebElements:
+    private final WebElement mainMenuItems;
 
     /**
      * Constructor for class MainMenu
@@ -29,13 +30,14 @@ public class MainMenu {
      */
     public void clickToMainMenuItem(String mainMenuItem) {
         switch (mainMenuItem) {
-            case "Home" -> mainMenuItems.findElement(By.cssSelector(".general-0>a")).click();
-            case "Rubber Ducks" -> mainMenuItems.findElement(By.cssSelector(".category-1>a:first-child")).click();
+            case "Home" -> mainMenuItems.findElement(getLocator("MainMenu.home")).click();
+            case "Rubber Ducks" -> mainMenuItems.findElement(getLocator("MainMenu.rubberDucks")).click();
             case "Subcategory" -> {
                 Actions builder = new Actions(driver);
-                builder.moveToElement(mainMenuItems.findElement(By.cssSelector(".category-1>a:first-child")))
+                builder.moveToElement(mainMenuItems.findElement(getLocator("MainMenu.subcategory")))
                         .moveByOffset(0,45).click().perform();
             }
+            default -> throw new RuntimeException("No such main menu item");
         }
     }
 }

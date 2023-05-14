@@ -1,17 +1,13 @@
 package pageobject.object;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import static pageobject.helpers.Locators.getLocator;
 
 /**
  * Class for object LoginPage (Object model)
  */
 public class LoginPage extends PageBase {
-    // Fields:
-    private final By emailInput = By.name("email");
-    private final By passwordInput = By.name("password");
-    private final By loginButton = By.name("login");
-    private final By loginErrorMessage = By.cssSelector(".notice.errors");
     // Driver:
     private final WebDriver driver;
 
@@ -28,7 +24,7 @@ public class LoginPage extends PageBase {
      * @param email
      */
     public void enterEmail(String email) {
-        driver.findElement(emailInput).sendKeys(email);
+        driver.findElement(getLocator("LoginPage.emailInput")).sendKeys(email);
     }
 
     /**
@@ -36,14 +32,14 @@ public class LoginPage extends PageBase {
      * @param password
      */
     public void enterPassword(String password) {
-        driver.findElement(passwordInput).sendKeys(password);
+        driver.findElement(getLocator("LoginPage.passwordInput")).sendKeys(password);
     }
 
     /**
      * Method to click login button
      */
     public void clickLoginButton() {
-        driver.findElement(loginButton).click();
+        driver.findElement(getLocator("LoginPage.loginButton")).click();
     }
 
     /**
@@ -62,7 +58,7 @@ public class LoginPage extends PageBase {
      * @return boolean
      */
     public boolean loginErrorMessageIsVisible() {
-        return driver.findElement(loginErrorMessage).isDisplayed();
+        return driver.findElement(getLocator("LoginPage.loginErrorMessage")).isDisplayed();
     }
 
     /**
