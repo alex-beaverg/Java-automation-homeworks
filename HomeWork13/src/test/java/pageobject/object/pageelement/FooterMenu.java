@@ -1,13 +1,14 @@
 package pageobject.object.pageelement;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+
+import static pageobject.helpers.Locators.getLocator;
 
 /**
  * Class FooterMenu (page element)
  */
 public class FooterMenu {
-    // Fields:
+    // WebElements:
     private final WebElement footerMenuItems;
 
     /**
@@ -24,33 +25,17 @@ public class FooterMenu {
      */
     public WebElement getFooterMenuItem(String footerMenuItem) {
         switch (footerMenuItem) {
-            case "Rubber Ducks" -> { return footerMenuItems.findElement(By.cssSelector(".categories a")); }
-            case "ACME Corp." -> { return footerMenuItems.findElement(By.cssSelector(".manufacturers a")); }
-            case "Customer Service" -> {
-                return footerMenuItems.findElement(By.cssSelector(".account ul li:nth-child(1)>a"));
-            }
-            case "Regional Settings" -> {
-                return footerMenuItems.findElement(By.cssSelector(".account ul li:nth-child(2)>a"));
-            }
-            case "Create Account" -> {
-                return footerMenuItems.findElement(By.cssSelector(".account ul li:nth-child(3)>a"));
-            }
-            case "Login" -> {
-                return footerMenuItems.findElement(By.cssSelector(".account ul li:nth-child(4)>a"));
-            }
-            case "About Us" -> {
-                return footerMenuItems.findElement(By.cssSelector(".information ul li:nth-child(1)>a"));
-            }
-            case "Delivery Information" -> {
-                return footerMenuItems.findElement(By.cssSelector(".information ul li:nth-child(2)>a"));
-            }
-            case "Privacy Policy" -> {
-                return footerMenuItems.findElement(By.cssSelector(".information ul li:nth-child(3)>a"));
-            }
-            case "Terms & Conditions" -> {
-                return footerMenuItems.findElement(By.cssSelector(".information ul li:nth-child(4)>a"));
-            }
+            case "Rubber Ducks" -> { return footerMenuItems.findElement(getLocator("FooterMenu.rubDucks")); }
+            case "ACME Corp" -> { return footerMenuItems.findElement(getLocator("FooterMenu.acmeCorp")); }
+            case "Customer Serv" -> { return footerMenuItems.findElement(getLocator("FooterMenu.customerServ")); }
+            case "Regional Sett" -> { return footerMenuItems.findElement(getLocator("FooterMenu.regSett")); }
+            case "Create Account" -> { return footerMenuItems.findElement(getLocator("FooterMenu.createAcc")); }
+            case "Login" -> { return footerMenuItems.findElement(getLocator("FooterMenu.login")); }
+            case "About Us" -> { return footerMenuItems.findElement(getLocator("FooterMenu.aboutUs")); }
+            case "Delivery Info" -> { return footerMenuItems.findElement(getLocator("FooterMenu.deliveryInfo")); }
+            case "Privacy Policy" -> { return footerMenuItems.findElement(getLocator("FooterMenu.prPolicy")); }
+            case "Terms & Cond" -> { return footerMenuItems.findElement(getLocator("FooterMenu.termsAndCond")); }
+            default -> throw new RuntimeException("No such footer menu item");
         }
-        return null;
     }
 }

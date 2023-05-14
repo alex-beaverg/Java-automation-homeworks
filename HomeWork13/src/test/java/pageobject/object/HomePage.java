@@ -1,22 +1,20 @@
 package pageobject.object;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pageobject.object.pageelement.FooterMenu;
 import pageobject.object.pageelement.MainMenu;
+
+import static pageobject.helpers.Locators.getLocator;
 
 /**
  * Class for object HomePage (Object model)
  */
 public class HomePage extends PageBase {
-    // Fields:
-    private static final By successMessage = By.cssSelector(".notice.success");
-    public MainMenu mainMenu;
-    private static final By mainMenuLocator = By.id("site-menu");
-    public FooterMenu footerMenu;
-    private static final By footerMenuLocator = By.id("footer");
     // Driver:
     private final WebDriver driver;
+    // Fields:
+    public MainMenu mainMenu;
+    public FooterMenu footerMenu;
 
     /**
      * Constructor for class HomePage
@@ -24,8 +22,8 @@ public class HomePage extends PageBase {
      */
     public HomePage(WebDriver driver) {
         this.driver = driver;
-        mainMenu = new MainMenu(driver, driver.findElement(mainMenuLocator));
-        footerMenu = new FooterMenu(driver.findElement(footerMenuLocator));
+        mainMenu = new MainMenu(driver, driver.findElement(getLocator("HomePage.mainMenuLocator")));
+        footerMenu = new FooterMenu(driver.findElement(getLocator("HomePage.footerMenuLocator")));
     }
 
     /**
@@ -33,7 +31,7 @@ public class HomePage extends PageBase {
      * @return boolean
      */
     public boolean successMessageIsVisible() {
-        return driver.findElement(successMessage).isDisplayed();
+        return driver.findElement(getLocator("HomePage.successMessage")).isDisplayed();
     }
 
     /**

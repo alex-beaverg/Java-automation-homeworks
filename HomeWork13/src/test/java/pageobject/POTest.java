@@ -125,7 +125,7 @@ public class POTest extends TestBase {
     @Test(groups = "footer menu items tests")
     public void acmeCorpFooterMenuItemTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.footerMenu.getFooterMenuItem("ACME Corp.").click();
+        homePage.footerMenu.getFooterMenuItem("ACME Corp").click();
         AcmeCorpPage acmeCorpPage = new AcmeCorpPage(driver);
         Assert.assertTrue(acmeCorpPage.hasOpened(), "ACME Corp. page hasn't opened");
     }
@@ -136,7 +136,7 @@ public class POTest extends TestBase {
     @Test(groups = "footer menu items tests")
     public void customerServiceFooterMenuItemTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.footerMenu.getFooterMenuItem("Customer Service").click();
+        homePage.footerMenu.getFooterMenuItem("Customer Serv").click();
         CustomerServicePage customerServicePage = new CustomerServicePage(driver);
         Assert.assertTrue(customerServicePage.hasOpened(), "Customer Service page hasn't opened");
     }
@@ -147,7 +147,7 @@ public class POTest extends TestBase {
     @Test(groups = "footer menu items tests")
     public void regionalSettingsFooterMenuItemTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.footerMenu.getFooterMenuItem("Regional Settings").click();
+        homePage.footerMenu.getFooterMenuItem("Regional Sett").click();
         RegionalSettingsPage regionalSettingsPage = new RegionalSettingsPage(driver);
         Assert.assertTrue(regionalSettingsPage.hasOpened(), "Regional Settings page hasn't opened");
     }
@@ -191,7 +191,7 @@ public class POTest extends TestBase {
     @Test(groups = "footer menu items tests")
     public void deliveryInformationFooterMenuItemTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.footerMenu.getFooterMenuItem("Delivery Information").click();
+        homePage.footerMenu.getFooterMenuItem("Delivery Info").click();
         DeliveryInformationPage deliveryInformationPage = new DeliveryInformationPage(driver);
         Assert.assertTrue(deliveryInformationPage.hasOpened(), "Delivery Information page hasn't opened");
     }
@@ -213,7 +213,7 @@ public class POTest extends TestBase {
     @Test(groups = "footer menu items tests")
     public void termsAndConditionsFooterMenuItemTest() {
         HomePage homePage = new HomePage(driver);
-        homePage.footerMenu.getFooterMenuItem("Terms & Conditions").click();
+        homePage.footerMenu.getFooterMenuItem("Terms & Cond").click();
         TermsAndConditionsPage termsAndConditionsPage = new TermsAndConditionsPage(driver);
         Assert.assertTrue(termsAndConditionsPage.hasOpened(), "Terms & Conditions page hasn't opened");
     }
