@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Main menu items object model tests">
-    <test name="Main menu items object model tests" parallel="true" thread-count="1">
+<suite name="Main menu items selenide tests">
+    <test name="Main menu items selenide tests" parallel="true" thread-count="1">
         <groups>
             <run>
                 <include name="for all tests" />
@@ -9,7 +9,7 @@
             </run>
         </groups>
         <classes>
-            <class name="pageobject.POTest" />
+            <class name="pageobject.SelenideTest" />
         </classes>
     </test>
 </suite>
